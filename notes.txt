@@ -1,0 +1,12 @@
+simple calculator application:
+
+1. **writeExp(e)**: This function is used to write an expression. It takes an event object `e` as an argument. The `id` of the target element that triggered the event is appended to the `value` of the `display` object. This is typically used to add the clicked number or operator to the display of the calculator.
+
+2. **getResult()**: This function is used to evaluate the expression in the `display` and show the result. If the `display` is empty, it alerts the user to enter an expression. Otherwise, it tries to evaluate the expression using the `new Function` constructor (which is a safer alternative to `eval`). If the expression is invalid, it catches the error, alerts the user, and clears the `display`.
+
+3. **allClear()**: This function is used to clear the `display`. It sets the `value` of the `display` to an empty string.
+
+4. **backspace()**: This function is used to handle backspace functionality. It removes the last character from the `display` value.
+
+The `display` is assumed to be a global variable that represents the calculator's display. It could be a text input or any other element that has a `value` property. Also, these functions need to be connected to the appropriate event handlers to function correctly. For example, `writeExp` might be connected to the `click` event of the number and operator buttons, `getResult` to the equals button, `allClear` to the AC button, and `backspace` to the backspace button. 
+
